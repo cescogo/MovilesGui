@@ -33,7 +33,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class MostrarGrupos extends JFrame {
       public MostrarGrupos(Control c) {
-            super("Mostrar Cursos");
+            super("Mostrar Grupos");
             tabla= new ModeloTabla2();
             
         ajustarComponentes(getContentPane());   
@@ -81,6 +81,11 @@ public class MostrarGrupos extends JFrame {
         
         pTabla.add(BorderLayout.CENTER, desplazamientoTabla);
         formulario.add(pTabla,BorderLayout.CENTER);
+         salir= new JButton("salir");
+                                salir.addActionListener((ActionEvent e)->{salir();});
+                                cancelar =new JPanel(new BorderLayout());       
+                                cancelar.add(salir ,BorderLayout.EAST);
+                                principal.add(cancelar,BorderLayout.SOUTH);
         principal.add(formulario);
         c.add(principal);
        
@@ -88,7 +93,7 @@ public class MostrarGrupos extends JFrame {
     }
      private void salir()
     {
-        VenOpcEstudiante vi = new VenOpcEstudiante(gestor);
+        VenOpcGrupo vi = new VenOpcGrupo(gestor);
         vi.init();
         this.dispose();
     }
@@ -147,7 +152,8 @@ public class MostrarGrupos extends JFrame {
    private JTextField buscar;
    private JLabel bus;
     private JButton b_buscar;
-    
+    private JButton salir;
+    private JPanel cancelar;
     
 }
  class ModeloTabla2 extends DefaultTableModel {

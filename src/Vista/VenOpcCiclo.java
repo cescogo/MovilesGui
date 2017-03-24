@@ -57,8 +57,7 @@ public class VenOpcCiclo extends JFrame {
                                 modificar.addActionListener((ActionEvent e)->{modificar();});
 				central.add(modificar);
 				
-				consultar= new JButton("buscar ciclo");
-				central.add(consultar);
+				
 				
 				eliminar= new JButton("eliminar ciclo");
                                 eliminar.addActionListener((ActionEvent e)->{eliminar();});
@@ -106,7 +105,7 @@ public class VenOpcCiclo extends JFrame {
     }
     
     private JButton agregar;
-    private JButton consultar; 
+   
     private JButton modificar;
     private JButton eliminar;
     private JButton salir;

@@ -73,8 +73,7 @@ public class VenOpcEstudiante extends JFrame {
                                 
                                
 				
-				consultar= new JButton("buscar Persona");
-				central.add(consultar);
+				
 				
 				eliminar= new JButton("eliminar Persona");
                                 eliminar.addActionListener((ActionEvent e)->{eliminar();});
@@ -155,7 +154,7 @@ public class VenOpcEstudiante extends JFrame {
     private JButton agregarAd;
     private JButton agregarPro;
     private JButton agregarMat;
-    private JButton consultar; 
+   
     private JButton modificar;
     private JButton eliminar;
     private JButton salir;

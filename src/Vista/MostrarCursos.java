@@ -82,6 +82,12 @@ public class MostrarCursos extends JFrame{
         
         pTabla.add(BorderLayout.CENTER, desplazamientoTabla);
         formulario.add(pTabla,BorderLayout.CENTER);
+        
+                                   salir= new JButton("salir");
+                                salir.addActionListener((ActionEvent e)->{salir();});
+                                cancelar =new JPanel(new BorderLayout());       
+                                cancelar.add(salir ,BorderLayout.EAST);
+                                principal.add(cancelar,BorderLayout.SOUTH);
         principal.add(formulario);
         c.add(principal);
         
@@ -96,7 +102,7 @@ public class MostrarCursos extends JFrame{
     }
      private void salir()
     {
-        VenOpcEstudiante vi = new VenOpcEstudiante(gestor);
+        VenOpcCurso vi = new VenOpcCurso(gestor);
         vi.init();
         this.dispose();
     }
@@ -143,7 +149,8 @@ public class MostrarCursos extends JFrame{
    private JTextField buscar;
    private JLabel bus;
     private JButton b_buscar;
-    
+    private JButton salir;
+    private JPanel cancelar;
     
 }
  class ModeloTabla1 extends DefaultTableModel {

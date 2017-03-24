@@ -57,8 +57,7 @@ public class VenOpcCarrera extends JFrame{
                                 modificar.addActionListener((ActionEvent e)->{modificar();});
 				central.add(modificar);
 				
-				consultar= new JButton("buscar carrera");
-				central.add(consultar);
+				
 				
 				eliminar= new JButton("eliminar carrera");
                                 eliminar.addActionListener((ActionEvent e)->{eliminar();});
@@ -107,7 +106,7 @@ public class VenOpcCarrera extends JFrame{
     }
     
     private JButton agregar;
-    private JButton consultar; 
+     
     private JButton modificar;
     private JButton eliminar;
     private JButton salir;
